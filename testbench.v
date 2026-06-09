@@ -4,7 +4,7 @@ reg n_rst,clk,tx_en;
 reg[7:0] data;
 wire tx_out;
 
-  uart_rtl dut1(.n_rst(n_rst),.clk(clk),.tx_en(tx_en),.data(data),.tx_out(tx_out)); //Instantiate the main transmitter module
+uart_rtl dut1(.n_rst(n_rst),.clk(clk),.tx_en(tx_en),.data(data),.tx_out(tx_out)); //Instantiate the main transmitter module
 
 always #18.5185 begin clk=~clk; //ON Duration = Cycle Duration/2 = 18.5185 ns
 end
