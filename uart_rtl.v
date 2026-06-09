@@ -12,7 +12,7 @@ reg[2:0] bit_count=3'd0;
 reg tx_line=1'b1; //Initially the tx line is held high before the stop bit arrives
 wire baud_en;
 reg[7:0] shift_reg=8'd0;    
-baudrate_gen BAUD_GENERATOR(.n_rst(n_rst),.clk(clk),.baud_en(baud_en));    //115200
+baudrate_gen BAUD_GENERATOR(.n_rst(n_rst),.clk(clk),.baud_en(baud_en));   
 
 
 always@(posedge clk or negedge n_rst) begin 
