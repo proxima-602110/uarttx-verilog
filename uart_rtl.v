@@ -26,7 +26,7 @@ always@(posedge clk or negedge n_rst) begin
     end
 end
          
-//State logic for the transmitter
+    //State logic for the transmitter. The baud rate enable signal (baud_en) acts as a synchronizer for handling different processes during the data transmission
 always@(*) begin
     n_state=state;
     
